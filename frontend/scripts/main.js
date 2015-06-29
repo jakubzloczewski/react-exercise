@@ -7,6 +7,7 @@ import GroupsStore from './stores/GroupsStore.js';
 import AssignmentsStore from './stores/AssignmentsStore.js';
 
 import AddUserForm from './components/AddUserForm.js';
+import AddGroupForm from './components/AddGroupForm.js';
 
 import UsersList from './components/UsersList.js';
 import GroupsList from './components/GroupsList.js';
@@ -50,6 +51,7 @@ class App extends React.Component {
             <div>
                 <AddUserForm/>
                 <UsersList UsersStore={UsersStore} GroupsStore={GroupsStore} AssignmentsStore={AssignmentsStore}/>
+                <AddGroupForm/>
                 <GroupsList GroupsStore={GroupsStore}/>
             </div>
         );
