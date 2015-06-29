@@ -1,5 +1,6 @@
 import React from 'react';
 
+import UsersListItem from './UsersListItem.js';
 
 class UsersList extends React.Component {
     render() {
@@ -8,9 +9,9 @@ class UsersList extends React.Component {
         return (
             <div>
                 <h2>Users: </h2>
-            {users.map(u => {
-                return <div key={u.id}>{u.name}</div>
-            })}
+                {users.map(u => {
+                    return <UsersListItem key={u.id} user={u}/>
+                })}
             </div>
         );
     }

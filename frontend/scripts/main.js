@@ -3,12 +3,16 @@ import './../main.less';
 import React from 'react';
 
 import UsersStore from './stores/UsersStore.js';
+import GroupsStore from './stores/GroupsStore.js';
+
 import UsersList from './components/UsersList.js';
+import GroupsList from './components/GroupsList.js';
 
 
 const getAppState = function () {
     return {
-        UsersStore: UsersStore.getState()
+        UsersStore: UsersStore.getState(),
+        GroupsStore: GroupsStore.getState()
     };
 };
 
@@ -20,10 +24,13 @@ class App extends React.Component {
 
     componentDidMount() {
         UsersStore.listen(this.onChange.bind(this));
+        GroupsStore.listen(this.onChange.bind(this));
+
     }
 
     componentWillUnmount() {
         UsersStore.unlisten(this.onChange.bind(this));
+        GroupsStore.unlisten(this.onChange.bind(this));
     }
 
     onChange() {
@@ -31,10 +38,11 @@ class App extends React.Component {
     }
 
     render() {
-        const {UsersStore} = this.state;
+        const {UsersStore, GroupsStore} = this.state;
         return (
             <div>
                 <UsersList UsersStore={UsersStore}/>
+                <GroupsList GroupsStore={GroupsStore}/>
             </div>
         );
     }
