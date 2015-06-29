@@ -1,5 +1,8 @@
 import React from 'react';
 
+import TextInput from './../common/TextInput.js';
+import Button from './../common/Button.js';
+
 import GroupsActions from './../../actions/GroupsActions.js';
 
 class AddGroupForm extends React.Component {
@@ -13,8 +16,8 @@ class AddGroupForm extends React.Component {
 
         return (
             <div>
-                <input type="text" onChange={this.onChange.bind(this)}/>
-                <input type="button" value="add group" onClick={this.onAdd.bind(this)} disabled={disabled}/>
+                <TextInput onChange={this.onChange.bind(this)}/>
+                <Button label="add group" onClick={this.onAdd.bind(this)} disabled={disabled}/>
             </div>
         );
     }

@@ -4,6 +4,7 @@ import UsersActions from './../../actions/UsersActions.js';
 
 import OptionsPicker from './../common/OptionsPicker.js';
 import UserGroups from './UserGroups.js';
+import Button from './../common/Button.js';
 
 class UsersListItem extends React.Component {
     render() {
@@ -21,7 +22,7 @@ class UsersListItem extends React.Component {
                 <div>Name : {name}</div>
                 <UserGroups groups={userGroups} onRemove={this.removeFromGroup.bind(this)}/>
                 <OptionsPicker options={groups} onSelect={this.addToGroup.bind(this)}/>
-                <input type="button" value="remove user" onClick={this.removeUser.bind(this)}/>
+                <Button label="remove user" onClick={this.removeUser.bind(this)}/>
             </div>
         );
     }

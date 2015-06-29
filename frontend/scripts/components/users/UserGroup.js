@@ -1,12 +1,14 @@
 import React from 'react';
 
+import Button from './../common/Button.js';
+
 class UserGroup extends React.Component {
     render() {
         const {group} = this.props;
         return (
             <div>
                 <span>{group.name}</span>
-                <input type="button" value="remove from group" onClick={this.onRemove.bind(this)}/>
+                <Button value="remove from group" onClick={this.onRemove.bind(this)}/>
             </div>);
     }
 

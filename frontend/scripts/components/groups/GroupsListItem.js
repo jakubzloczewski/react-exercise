@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Button from './../common/Button.js';
+
 class GroupsListItem extends React.Component {
     render() {
         const {group, assignments} = this.props;
@@ -10,8 +12,8 @@ class GroupsListItem extends React.Component {
         return (
             <div>
                 {name}
-                <input type="button"
-                    value="remove group"
+                <Button
+                    label="remove group"
                     onClick={this.removeGroup.bind(this)}
                     disabled={!groupInUse}/>
             </div>

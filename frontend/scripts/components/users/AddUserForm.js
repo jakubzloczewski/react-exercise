@@ -1,5 +1,8 @@
 import React from 'react';
 
+import TextInput from './../common/TextInput.js';
+import Button from './../common/Button.js';
+
 import UsersActions from './../../actions/UsersActions.js';
 
 class AddUserForm extends React.Component {
@@ -13,8 +16,8 @@ class AddUserForm extends React.Component {
 
         return (
             <div>
-                <input type="text" onChange={this.onChange.bind(this)}/>
-                <input type="button" value="add user" onClick={this.onAdd.bind(this)} disabled={disabled}/>
+                <TextInput onChange={this.onChange.bind(this)}/>
+                <Button label="add user" onClick={this.onAdd.bind(this)} disabled={disabled}/>
             </div>
         );
     }
