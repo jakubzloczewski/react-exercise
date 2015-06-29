@@ -1,33 +1,9 @@
 import React from 'react';
-import GroupPicker from './GroupPicker.js';
 import AssignmentsActions from './../actions/AssignmentsActions.js';
 import UsersActions from './../actions/UsersActions.js';
 
-class UserGroup extends React.Component {
-    render() {
-        const {group} = this.props;
-        return (
-            <div>
-                <span>{group.name}</span>
-                <input type="button" value="remove from group" onClick={this.onRemove.bind(this)}/>
-            </div>);
-    }
-
-    onRemove() {
-        this.props.onRemove(this.props.group.id);
-    }
-}
-
-class UserGroups extends React.Component {
-    render() {
-        const {groups, onRemove} = this.props;
-        return (
-            <div>
-            {groups.map(g=> <UserGroup key={g.id} group={g} onRemove={onRemove}/>)}
-            </div>
-        );
-    }
-}
+import GroupPicker from './GroupPicker.js';
+import UserGroups from './UserGroups.js';
 
 class UsersListItem extends React.Component {
     render() {
