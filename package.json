@@ -8,22 +8,25 @@
     "babel": "^5.6.14",
     "babel-core": "^5.6.15",
     "babel-loader": "^5.2.2",
+    "color": "^0.9.0",
     "css-loader": "^0.15.1",
     "eslint": "^0.24.0",
     "eslint-plugin-react": "^2.6.2",
     "express": "^4.13.0",
+    "json-loader": "^0.5.2",
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
     "lodash": "^3.9.3",
     "node-libs-browser": "^0.5.2",
     "q": "^1.4.1",
+    "radium": "^0.13.2",
     "react": "^0.13.3",
     "style-loader": "^0.12.3",
     "webpack": "^1.10.0"
   },
   "devDependencies": {},
   "scripts": {
-    "server" : "./node_modules/.bin/babel-node ./index.js",
+    "server": "./node_modules/.bin/babel-node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

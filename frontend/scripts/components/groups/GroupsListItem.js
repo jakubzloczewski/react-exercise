@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from './../common/Button.js';
+import Paper from './../common/Paper.js';
 
 class GroupsListItem extends React.Component {
     render() {
@@ -10,13 +11,15 @@ class GroupsListItem extends React.Component {
         const groupInUse = _.isEmpty(_.select(assignments, {groupId: id}));
 
         return (
-            <div>
-                {name}
-                <Button
-                    label="remove group"
-                    onClick={this.removeGroup.bind(this)}
-                    disabled={!groupInUse}/>
-            </div>
+            <Paper style={{width: '250px', display: 'inline-block'}}>
+                <div>Name: {name}</div>
+                <div style={{textAlign: 'right'}}>
+                    <Button
+                        label="remove group"
+                        onClick={this.removeGroup.bind(this)}
+                        disabled={!groupInUse}/>
+                </div>
+            </Paper>
         );
     }
 

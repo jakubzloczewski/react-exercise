@@ -8,7 +8,7 @@ class UserGroup extends React.Component {
         return (
             <div>
                 <span>{group.name}</span>
-                <Button value="remove from group" onClick={this.onRemove.bind(this)}/>
+                <Button label="remove from group" onClick={this.onRemove.bind(this)}/>
             </div>);
     }
 

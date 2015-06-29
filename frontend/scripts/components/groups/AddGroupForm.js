@@ -16,7 +16,8 @@ class AddGroupForm extends React.Component {
 
         return (
             <div>
-                <TextInput onChange={this.onChange.bind(this)}/>
+                <TextInput placeholder={'Group name ...'}
+                    onChange={this.onChange.bind(this)}/>
                 <Button label="add group" onClick={this.onAdd.bind(this)} disabled={disabled}/>
             </div>
         );

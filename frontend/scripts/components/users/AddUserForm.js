@@ -16,7 +16,8 @@ class AddUserForm extends React.Component {
 
         return (
             <div>
-                <TextInput onChange={this.onChange.bind(this)}/>
+                <TextInput placeholder={'User name ...'}
+                    onChange={this.onChange.bind(this)}/>
                 <Button label="add user" onClick={this.onAdd.bind(this)} disabled={disabled}/>
             </div>
         );

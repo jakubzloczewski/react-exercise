@@ -21,6 +21,10 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel?stage=0'
+            },
+            {
+                test: /\.json$/,
+                loader: 'json'
             }
         ]
     }

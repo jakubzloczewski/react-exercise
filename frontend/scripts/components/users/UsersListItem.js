@@ -5,6 +5,7 @@ import UsersActions from './../../actions/UsersActions.js';
 import OptionsPicker from './../common/OptionsPicker.js';
 import UserGroups from './UserGroups.js';
 import Button from './../common/Button.js';
+import Paper from './../common/Paper.js';
 
 class UsersListItem extends React.Component {
     render() {
@@ -18,12 +19,14 @@ class UsersListItem extends React.Component {
 
 
         return (
-            <div>
+            <Paper style={{width: '250px', display: 'inline-block'}}>
                 <div>Name : {name}</div>
                 <UserGroups groups={userGroups} onRemove={this.removeFromGroup.bind(this)}/>
                 <OptionsPicker options={groups} onSelect={this.addToGroup.bind(this)}/>
-                <Button label="remove user" onClick={this.removeUser.bind(this)}/>
-            </div>
+                <div style={{textAlign: 'right'}}>
+                    <Button label="remove user" secondary={true} onClick={this.removeUser.bind(this)}/>
+                </div>
+            </Paper>
         );
     }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import Button from './Button.js';
 
 class OptionPicker extends React.Component {
     constructor(props) {
@@ -18,7 +19,9 @@ class OptionPicker extends React.Component {
                         return <option key={g.id} value={g.id}>{g.name}</option>
                     })}
                 </select>
-                <input type="button" value="add" onClick={this.onClick.bind(this)}/>
+                <Button label="add"
+                    primary={true}
+                    onClick={this.onClick.bind(this)}/>
             </div>
         );
     }

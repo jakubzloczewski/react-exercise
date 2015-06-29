@@ -1,6 +1,7 @@
 import React from 'react';
 
 import GroupsListItem from './GroupsListItem.js';
+import Paper from './../common/Paper.js';
 
 class GroupsList extends React.Component {
     render() {
@@ -8,12 +9,13 @@ class GroupsList extends React.Component {
         const {assignments} = this.props.AssignmentsStore;
 
         return (
-            <div>
+            <Paper>
+                {this.props.children}
                 <h2>Groups: </h2>
                 {groups.map(u => {
                     return <GroupsListItem key={u.id} group={u} assignments={assignments}/>
                 })}
-            </div>
+            </Paper>
         );
     }
 }
