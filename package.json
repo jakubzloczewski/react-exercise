@@ -26,6 +26,8 @@
   },
   "devDependencies": {},
   "scripts": {
+    "preserver" : "npm install",
+    "prebuild" : "npm install",
     "server": "./node_modules/.bin/babel-node ./index.js",
     "build" : "./scripts/build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
