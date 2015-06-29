@@ -8,6 +8,10 @@ class UsersStore {
         this.fetching = null;
         this.users = [{id: _.uniqueId(), name: 'User 1'}, {id: _.uniqueId(), name: 'User 2'}];
     }
+
+    add({name}) {
+        this.users.push({id: _.uniqueId(), name});
+    }
 }
 
 export default alt.createStore(UsersStore, 'UsersStore');

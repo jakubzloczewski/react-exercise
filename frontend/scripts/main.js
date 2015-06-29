@@ -5,6 +5,8 @@ import React from 'react';
 import UsersStore from './stores/UsersStore.js';
 import GroupsStore from './stores/GroupsStore.js';
 
+import AddUserForm from './components/AddUserForm.js';
+
 import UsersList from './components/UsersList.js';
 import GroupsList from './components/GroupsList.js';
 
@@ -41,6 +43,7 @@ class App extends React.Component {
         const {UsersStore, GroupsStore} = this.state;
         return (
             <div>
+                <AddUserForm/>
                 <UsersList UsersStore={UsersStore}/>
                 <GroupsList GroupsStore={GroupsStore}/>
             </div>
