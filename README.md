@@ -26,13 +26,21 @@ https://github.com/jakubzloczewski/react-exercise/tree/master/frontend/scripts/s
 REST API for this application could look like this:
 
 GET /users/
+
 DELETE /users/{id}
+
 POST /users/ ( with body: { name })
 
 GET /group/
+
 DELETE /group/{id}
+
 POST /group/ ( with body: { name })
 
+
 GET /assignments/
+
 DELETE /assignments/ ( with body: {userId, groupId} )
+
 POST /assignments/ ( with body: {userId, groupId} )
+
