@@ -14,6 +14,10 @@ class AssignmentsStore {
             this.assignments.push(assignment)
         }
     }
+
+    remove(assignment) {
+        this.assignments = _.without(this.assignments, _.findWhere(this.assignments, assignment));
+    }
 }
 
 export default alt.createStore(AssignmentsStore, 'AssignmentsStore');
