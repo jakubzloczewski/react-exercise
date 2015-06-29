@@ -6,11 +6,11 @@ import UsersStore from './stores/UsersStore.js';
 import GroupsStore from './stores/GroupsStore.js';
 import AssignmentsStore from './stores/AssignmentsStore.js';
 
-import AddUserForm from './components/AddUserForm.js';
-import AddGroupForm from './components/AddGroupForm.js';
+import AddUserForm from './components/users/AddUserForm.js';
+import AddGroupForm from './components/groups/AddGroupForm.js';
 
-import UsersList from './components/UsersList.js';
-import GroupsList from './components/GroupsList.js';
+import UsersList from './components/users/UsersList.js';
+import GroupsList from './components/groups/GroupsList.js';
 
 
 const getAppState = function () {

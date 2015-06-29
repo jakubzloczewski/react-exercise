@@ -1,8 +1,8 @@
 import React from 'react';
-import AssignmentsActions from './../actions/AssignmentsActions.js';
-import UsersActions from './../actions/UsersActions.js';
+import AssignmentsActions from './../../actions/AssignmentsActions.js';
+import UsersActions from './../../actions/UsersActions.js';
 
-import GroupPicker from './GroupPicker.js';
+import OptionsPicker from './../common/OptionsPicker.js';
 import UserGroups from './UserGroups.js';
 
 class UsersListItem extends React.Component {
@@ -20,7 +20,7 @@ class UsersListItem extends React.Component {
             <div>
                 <div>Name : {name}</div>
                 <UserGroups groups={userGroups} onRemove={this.removeFromGroup.bind(this)}/>
-                <GroupPicker groups={groups} onSelect={this.addToGroup.bind(this)}/>
+                <OptionsPicker options={groups} onSelect={this.addToGroup.bind(this)}/>
                 <input type="button" value="remove user" onClick={this.removeUser.bind(this)}/>
             </div>
         );

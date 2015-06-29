@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UsersActions from './../actions/UsersActions.js';
+import UsersActions from './../../actions/UsersActions.js';
 
 class AddUserForm extends React.Component {
     constructor(props) {

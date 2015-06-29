@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GroupsActions from './../actions/GroupsActions.js';
+import GroupsActions from './../../actions/GroupsActions.js';
 
 class AddGroupForm extends React.Component {
     constructor(props) {
