@@ -50,9 +50,12 @@ class App extends React.Component {
         return (
             <div>
                 <AddUserForm/>
-                <UsersList UsersStore={UsersStore} GroupsStore={GroupsStore} AssignmentsStore={AssignmentsStore}/>
+                <UsersList UsersStore={UsersStore}
+                    GroupsStore={GroupsStore}
+                    AssignmentsStore={AssignmentsStore}/>
                 <AddGroupForm/>
-                <GroupsList GroupsStore={GroupsStore}/>
+                <GroupsList GroupsStore={GroupsStore}
+                    AssignmentsStore={AssignmentsStore}/>
             </div>
         );
     }
