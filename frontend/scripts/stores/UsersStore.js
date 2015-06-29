@@ -12,6 +12,10 @@ class UsersStore {
     add(user) {
         this.users.push(user);
     }
+
+    remove(userId) {
+        this.users = _.select(this.users, u => u.id !== userId);
+    }
 }
 
 export default alt.createStore(UsersStore, 'UsersStore');

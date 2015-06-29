@@ -1,7 +1,7 @@
 import React from 'react';
 import GroupPicker from './GroupPicker.js';
 import AssignmentsActions from './../actions/AssignmentsActions.js';
-
+import UsersActions from './../actions/UsersActions.js';
 
 class UserGroups extends React.Component {
     render() {
@@ -32,12 +32,17 @@ class UsersListItem extends React.Component {
                 <div>Name : {name}</div>
                 <UserGroups groups={userGroups}/>
                 <GroupPicker groups={groups} onSelect={this.addToGroup.bind(this)}/>
+                <input type="button" value="remove user" onClick={this.removeUser.bind(this)}/>
             </div>
         );
     }
 
     addToGroup(groupId) {
         AssignmentsActions.add({userId: this.props.user.id, groupId});
+    }
+
+    removeUser() {
+        UsersActions.remove(this.props.user.id);
     }
 }
 
