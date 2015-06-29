@@ -9,8 +9,8 @@ class UsersStore {
         this.users = [{id: _.uniqueId(), name: 'User 1'}, {id: _.uniqueId(), name: 'User 2'}];
     }
 
-    add({name}) {
-        this.users.push({id: _.uniqueId(), name});
+    add(user) {
+        this.users.push(user);
     }
 }
 

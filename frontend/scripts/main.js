@@ -4,6 +4,7 @@ import React from 'react';
 
 import UsersStore from './stores/UsersStore.js';
 import GroupsStore from './stores/GroupsStore.js';
+import AssignmentsStore from './stores/AssignmentsStore.js';
 
 import AddUserForm from './components/AddUserForm.js';
 
@@ -14,7 +15,8 @@ import GroupsList from './components/GroupsList.js';
 const getAppState = function () {
     return {
         UsersStore: UsersStore.getState(),
-        GroupsStore: GroupsStore.getState()
+        GroupsStore: GroupsStore.getState(),
+        AssignmentsStore: AssignmentsStore.getState()
     };
 };
 
@@ -27,12 +29,14 @@ class App extends React.Component {
     componentDidMount() {
         UsersStore.listen(this.onChange.bind(this));
         GroupsStore.listen(this.onChange.bind(this));
+        AssignmentsStore.listen(this.onChange.bind(this));
 
     }
 
     componentWillUnmount() {
         UsersStore.unlisten(this.onChange.bind(this));
         GroupsStore.unlisten(this.onChange.bind(this));
+        AssignmentsStore.unlisten(this.onChange.bind(this));
     }
 
     onChange() {
@@ -40,11 +44,12 @@ class App extends React.Component {
     }
 
     render() {
-        const {UsersStore, GroupsStore} = this.state;
+        const {UsersStore, GroupsStore, AssignmentsStore} = this.state;
+
         return (
             <div>
                 <AddUserForm/>
-                <UsersList UsersStore={UsersStore}/>
+                <UsersList UsersStore={UsersStore} GroupsStore={GroupsStore} AssignmentsStore={AssignmentsStore}/>
                 <GroupsList GroupsStore={GroupsStore}/>
             </div>
         );

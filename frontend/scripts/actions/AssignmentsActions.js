@@ -2,8 +2,8 @@ import alt from './../alt.js';
 import _ from 'lodash';
 
 class UsersActions {
-    add({name}) {
-        this.dispatch(_.extend({id : _.uniqueId()}, {name}));
+    add({groupId, userId}) {
+        this.dispatch({groupId, userId});
     }
 }
 

@@ -9,10 +9,12 @@ class AddUserForm extends React.Component {
     }
 
     render() {
+        const disabled = _.isEmpty(this.state.name);
+
         return (
             <div>
                 <input type="text" onChange={this.onChange.bind(this)}/>
-                <input type="button" value="add user" onClick={this.onAdd.bind(this)}/>
+                <input type="button" value="add user" onClick={this.onAdd.bind(this)} disabled={disabled}/>
             </div>
         );
     }
