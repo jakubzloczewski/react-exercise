@@ -4,8 +4,6 @@ var scriptsSrcPath = path.join(__dirname, 'frontend', 'scripts'),
     dev = true;
 
 module.exports = {
-    cache: true,
-    watch: true,
     devtool: dev ? 'source-map' : null,
     entry: path.join(scriptsSrcPath, 'main.js'),
     output: {
