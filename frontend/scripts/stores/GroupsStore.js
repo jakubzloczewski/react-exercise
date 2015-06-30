@@ -12,6 +12,9 @@ class GroupsStore {
     add(group) {
         this.groups.push(group);
     }
+    remove(groupId) {
+        this.groups = _.select(this.groups, g => g.id !== groupId);
+    }
 }
 
 export default alt.createStore(GroupsStore, 'GroupsStore');

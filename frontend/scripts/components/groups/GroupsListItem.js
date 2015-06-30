@@ -1,5 +1,7 @@
 import React from 'react';
 
+import GroupsActions from './../../actions/GroupsActions.js';
+
 import Button from './../common/Button.js';
 import Paper from './../common/Paper.js';
 
@@ -24,6 +26,7 @@ class GroupsListItem extends React.Component {
     }
 
     removeGroup() {
+        GroupsActions.remove(this.props.group.id);
     }
 }
 
